@@ -1,0 +1,825 @@
+/* ============ SUBPAGE1 - 공연/전시 ============ */
+
+/* main 기본 */
+main {
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+/* ============ 검색 ============ */
+#search {
+  margin-top: 18px;
+  display: flex;
+  justify-content: center;
+}
+
+#search .container {
+  height: 54px;
+  border-radius: 100px;
+  background: #fefefe;
+  border: 1px solid #ccc;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  overflow: hidden;
+}
+
+#search .container input {
+  flex: 1;
+  height: 100%;
+  border: none;
+  background: transparent;
+  margin-left: 30px;
+  font-size: 16px;
+  font-weight: 300;
+  color: #333;
+  outline: none;
+  font-family: inherit;
+}
+
+#search .container input::placeholder {
+  color: #aaa;
+  font-size: 20px;
+}
+
+.search-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 46px;
+  flex-shrink: 0;
+  cursor: pointer;
+  background: none;
+  border: none;
+  padding: 0;
+}
+
+.search-btn img {
+  width: 24px;
+  height: 24px;
+}
+
+
+/* ============ 공연/전시 헤더 섹션 ============ */
+#perf-nav-section {
+  margin-top: 26px;
+}
+
+/* 페이지 타이틀 */
+.page-title {
+  font-size: 40px;
+  font-weight: 700;
+  color: #111;
+  margin-bottom: 26px;
+}
+
+/* 페이지 탭 네비게이션 */
+.page-nav {
+  margin-bottom: 0;
+}
+
+.page-nav ul {
+  display: flex;
+  gap: 70px;
+  align-items: center;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.page-nav ul li a {
+  font-size: 18px;
+  color: #333;
+  white-space: nowrap;
+  padding-bottom: 12px;
+  display: inline-block;
+  position: relative;
+  transition: color 0.2s;
+}
+
+.page-nav ul li a:hover {
+  color: #1a1a1a;
+}
+
+.page-nav ul li a.on {
+  color: #1a1a1a;
+  font-weight: 600;
+}
+
+.page-nav ul li a.on::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 2px;
+  background: #1a1a1a;
+  margin-bottom: 1px;
+}
+
+/* ============ 장르 네비게이션 ============ */
+.genre-nav-wrap {
+  background: #f2f0eb;
+  margin-top: 18px;
+  padding: 17px 0;
+}
+
+.genre-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 26px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.genre-nav li a {
+  display: inline-block;
+  font-size: 16px;
+  font-weight: 300;
+  background: #fff;
+  padding: 9px 22px;
+  border-radius: 20px;
+  white-space: nowrap;
+  transition: background 0.2s, color 0.2s;
+}
+
+.genre-nav li a:hover {
+  background: #e8e0d0;
+  color: #111;
+}
+
+.genre-nav li a.active {
+  color: #fff;
+  background: #b8975a;
+}
+
+/* ============ 게시물 영역 ============ */
+#perf-content {
+  margin-top: 0;
+}
+
+/* 3단 레이아웃 */
+.content-layout {
+  display: flex;
+  align-items: flex-start;
+  gap: 0;
+}
+
+/* ============ 좌측 필터 사이드바 ============ */
+.filter-sidebar {
+  width: 239px;
+  flex-shrink: 0;
+  padding: 30px;
+  background: #fff;
+}
+
+.filter-group {
+  padding: 16px 0;
+}
+
+.filter-title {
+  font-size: 14px;
+  font-weight: 700;
+  color: #111;
+  margin-bottom: 12px;
+}
+
+.filter-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.filter-list li label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  color: #444;
+  cursor: pointer;
+}
+
+.filter-list li label input[type="checkbox"] {
+  width: 14px;
+  height: 14px;
+  accent-color: #b8975a;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.filter-dot {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.filter-count {
+  margin-left: auto;
+  font-size: 12px;
+  color: #999;
+}
+
+.filter-date {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+
+.filter-date input[type="date"] {
+  width: 100%;
+  height: 36px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 0 8px;
+  font-size: 13px;
+  color: #333;
+  font-family: inherit;
+  outline: none;
+}
+
+.filter-apply-btn {
+  width: 100%;
+  height: 34px;
+  background: #333;
+  color: #fff;
+  font-size: 13px;
+  border-radius: 4px;
+  cursor: pointer;
+  border: none;
+  font-family: inherit;
+  transition: background 0.2s;
+}
+
+.filter-apply-btn:hover {
+  background: #111;
+}
+
+.filter-divider {
+  height: 1px;
+  background: #e8e6e0;
+}
+
+/* ============ 중앙 콘텐츠 ============ */
+.content-main {
+  flex: 1;
+  min-width: 0;
+  padding: 0 10px;
+}
+
+/* 컨트롤 바 */
+.content-controlbar {
+  height: 90px;
+  background: #fff;
+  border: 1px solid #e2e0d8;
+  max-width: 1920px;
+  width: 100%;
+}
+
+.controlbar-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+  height: 100%;
+}
+
+.controlbar-count {
+  font-size: 12px;
+}
+
+.controlbar-right {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.sort-btn {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 12px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+  padding: 0;
+}
+
+.sort-btn img {
+  width: 12px;
+  height: 12px;
+  object-fit: contain;
+}
+
+.view-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 2px;
+  border-radius: 4px;
+  transition: background 0.2s;
+  opacity: 0.4;
+}
+
+.view-btn.active {
+  opacity: 1;
+}
+
+.view-btn:hover {
+  background: #f0ede6;
+  opacity: 1;
+}
+
+.view-btn img {
+  width: 32px;
+  object-fit: contain;
+}
+
+/* ============ 우측 콘텐츠 사이드 네비 ============ */
+.content-sidenav {
+  width: 80px;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding-top: 30px;
+}
+
+.content-side-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 10px 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+  text-align: center;
+  transition: box-shadow 0.2s;
+}
+
+.content-side-item:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.14);
+}
+
+.content-side-item img {
+  width: 28px;
+  height: 28px;
+  object-fit: contain;
+}
+
+.content-side-item span {
+  font-size: 11px;
+  color: #444;
+  line-height: 1.4;
+}
+
+/* ============ 우측 고정 사이드 네비 ============ */
+.side-nav {
+  position: fixed;
+  right: 10%;
+  z-index: 500;
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  border: 1px solid #e0e0e0;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 2px 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.side-nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 7px;
+  padding: 14px 16px;
+  text-align: center;
+  border-bottom: 1px solid #ebebeb;
+  transition: background 0.2s;
+}
+
+.side-nav-item:last-child {
+  border-bottom: none;
+}
+
+.side-nav-item:hover {
+  background: #f7f7f7;
+}
+
+.side-nav-item img {
+  height: 28px;
+  width: auto;
+  display: block;
+}
+
+.side-nav-item span {
+  font-size: 11px;
+  color: #555;
+  line-height: 1.5;
+  white-space: nowrap;
+}
+
+/* 레이아웃 안 사이드 네비는 숨김 */
+.content-sidenav {
+  display: none;
+}
+
+/* ============ 카드 공통 ============ */
+.card-img-wrap {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.card-img-wrap img {
+  width: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+.card-tag {
+  position: absolute;
+  top: 10px;
+  left: 12px;
+  font-size: 12px;
+  font-weight: 600;
+  color: #fff;
+  padding: 5px 14px;
+  border-radius: 12px;
+  z-index: 1;
+}
+
+.tag--classic {
+  background: #c9607a;
+}
+
+.tag--play {
+  background: #134486;
+  color: #ADC6FF;
+}
+
+.tag--gugak {
+  background: #3a3a3a;
+}
+
+.tag--opera {
+  background: #c06030;
+}
+
+.card-info {
+  padding: 14px 22px;
+}
+
+.card-venue {
+  font-size: 12px;
+  color: #888;
+  margin-bottom: 4px;
+}
+
+.card-title {
+  font-size: 14px;
+  margin-bottom: 17px;
+  line-height: 1.4;
+}
+
+.card-date {
+  font-size: 12px;
+  color: #666;
+  line-height: 1.6;
+  margin-bottom: 12px;
+  height: 38px;
+}
+
+.card-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.card-price {
+  font-size: 13px;
+  color: #333;
+}
+
+.card-btn {
+  font-size: 12px;
+  color: #555;
+  border: 1px solid #bbb;
+  border-radius: 20px;
+  padding: 5px 14px;
+  white-space: nowrap;
+  transition: background 0.2s, color 0.2s;
+}
+
+.card-btn:hover {
+  background: #b8975a;
+  color: #fff;
+  border-color: #b8975a;
+}
+
+/* ============ 상단 피처드 카드 ============ */
+.featured-cards {
+  display: flex;
+  gap: 10px;
+  margin-top: 30px;
+}
+
+.featured-card {
+  flex: 1;
+  background: #fff;
+  border-radius: 12px;
+}
+
+.featured-card .card-img-wrap {
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+/* ============ 이달의 공연 ============ */
+.monthly-section {
+  margin-top: 100px;
+  padding-bottom: 40px;
+}
+
+.monthly-title {
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 50px;
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+
+.perf-card {
+  background: #fff;
+}
+
+.perf-card .card-img-wrap {
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+/* ============ 페이지네이션 ============ */
+.pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  margin-top: 48px;
+  padding-bottom: 60px;
+}
+
+.page-arrow {
+  width: 36px;
+  height: 36px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background 0.2s, border-color 0.2s;
+  flex-shrink: 0;
+  text-decoration: none;
+}
+
+.page-arrow:hover {
+  background: #f0ede6;
+  border-color: #aaa;
+}
+
+.page-arrow img {
+  width: 6px;
+  height: auto;
+  display: block;
+}
+
+.page-num {
+  width: 36px;
+  height: 36px;
+  border: 1px solid #ddd;
+  background: #fff;
+  font-size: 14px;
+  border-radius: 4px;
+  color: #555;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: inherit;
+  text-decoration: none;
+  transition: background 0.2s, color 0.2s, border-color 0.2s;
+}
+
+.page-num:hover {
+  background: #f0ede6;
+  border-color: #aaa;
+  color: #111;
+}
+
+.page-num.active {
+  background: #333;
+  border-color: #333;
+  color: #fff;
+  font-weight: 600;
+}
+
+/* ============ 반응형 1100px ============ */
+@media (max-width: 1200px) {
+     /* 우측 고정 사이드 네비 숨김 */
+  .side-nav {
+    display: none;
+  }
+}
+@media (max-width: 1100px) {
+  .page-title {
+    font-size: 32px;
+  }
+
+  .page-nav ul {
+    gap: 40px;
+  }
+
+  .filter-sidebar {
+    width: 200px;
+    padding: 20px 16px;
+  }
+}
+
+/* ============ 반응형 768px ============ */
+@media (max-width: 768px) {
+
+  /* 검색 */
+  #search .container input,
+  #search .container input::placeholder {
+    font-size: 15px;
+  }
+
+  /* 페이지 타이틀 */
+  .page-title {
+    font-size: 26px;
+    margin-bottom: 18px;
+  }
+
+  /* 페이지 탭 - 스크롤 가능하게 */
+  .page-nav ul {
+    gap: 24px;
+    overflow-x: auto;
+    flex-wrap: nowrap;
+    -webkit-overflow-scrolling: touch;
+    padding-bottom: 4px;
+  }
+
+  .page-nav ul::-webkit-scrollbar {
+    display: none;
+  }
+
+  .page-nav ul li a {
+    font-size: 15px;
+    white-space: nowrap;
+  }
+
+  /* 헤더 on 밑줄 (모바일 햄버거 메뉴에서는 숨김) */
+  .header-nav ul li a.on::after {
+    display: none;
+  }
+
+  /* 장르 네비 */
+  .genre-nav {
+    gap: 10px;
+  }
+
+  .genre-nav li a {
+    font-size: 13px;
+    padding: 7px 14px;
+  }
+
+  /* 3단 → 세로 전환 */
+  .content-layout {
+    flex-direction: column;
+  }
+
+  /* 필터 사이드바: 모바일에서 숨김 */
+  .filter-sidebar {
+    display: none;
+  }
+
+  /* 우측 고정 사이드 네비 숨김 */
+  .side-nav {
+    display: none;
+  }
+
+  /* 콘텐츠 메인 패딩 제거 */
+  .content-main {
+    padding: 0;
+    width: 100%;
+  }
+
+  /* 컨트롤 바 */
+  .content-controlbar {
+    height: 60px;
+    padding: 0 14px;
+    margin-top: 12px;
+  }
+
+  /* 피처드 카드 2열 유지 */
+  .featured-cards {
+    gap: 12px;
+    margin-top: 20px;
+  }
+
+  /* 카드 그리드 → 2열 */
+  .card-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px 10px;
+  }
+
+  /* 이달의 공연 */
+  .monthly-section {
+    margin-top: 30px;
+  }
+
+  .monthly-title {
+    font-size: 18px;
+  }
+
+  /* 카드 정보 패딩 축소 */
+  .card-info {
+    padding: 10px 12px;
+  }
+
+  .card-title {
+    font-size: 13px;
+    margin-bottom: 10px;
+  }
+
+  .card-date {
+    height: auto;
+    margin-bottom: 8px;
+  }
+}
+
+/* ============ 반응형 480px ============ */
+@media (max-width: 480px) {
+
+  /* 페이지 타이틀 */
+  .page-title {
+    font-size: 22px;
+  }
+
+  /* 탭 폰트 축소 */
+  .page-nav ul li a {
+    font-size: 14px;
+  }
+
+  /* 장르 탭 */
+  .genre-nav li a {
+    font-size: 12px;
+    padding: 6px 12px;
+  }
+
+  /* 피처드 카드 → 1열 */
+  .featured-cards {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  /* 카드 그리드 → 1열 */
+  .card-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  /* 검색바 */
+  #search .container input,
+  #search .container input::placeholder {
+    font-size: 13px;
+  }
+
+  .search-btn {
+    margin-right: 16px;
+  }
+
+  .search-btn img {
+    width: 18px;
+    height: 18px;
+  }
+}

@@ -1,0 +1,765 @@
+/* ============ SUBPAGE2 - 공연 상세 ============ */
+
+main {
+  padding-top: 66px; /* 고정 헤더 높이 */
+}
+
+/* ============ 헤더 on ============ */
+.header-nav ul li {
+  position: relative;
+}
+.header-nav ul li a.on {
+  color: #1a1a1a;
+  font-weight: 600;
+}
+.header-nav ul li a.on::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -20px;
+  width: 100%;
+  height: 2px;
+  background: #1a1a1a;
+}
+
+/* ============ 브레드크럼 ============ */
+.breadcrumb {
+  background: #fff;
+  padding: 16px 0;
+}
+
+.breadcrumb .container {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.breadcrumb a {
+  font-size: 13px;
+  color: #777;
+  transition: color 0.2s;
+}
+
+.breadcrumb a:hover {
+  color: #333;
+}
+
+.bc-arrow {
+  font-size: 11px;
+  color: #bbb;
+}
+
+.bc-current {
+  font-size: 13px;
+  color: #333;
+  font-weight: 600;
+}
+
+/* ============ 히어로 배너 ============ */
+.detail-hero {
+  position: relative;
+  width: 100%;
+  height: 75vh;
+  min-height: 480px;
+  max-height: 700px;
+  overflow: hidden;
+}
+
+.hero-img-wrap {
+  position: absolute;
+  inset: 0;
+}
+
+.hero-img-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  display: block;
+}
+
+/* 하단에만 어두운 그라디언트 */
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(0,0,0,0.72) 0%,
+    rgba(0,0,0,0.20) 45%,
+    transparent 75%
+  );
+}
+
+.hero-content {
+  position: absolute;
+  bottom: 40%;
+  left: 0;
+  width: 100%;
+  color: #fff;
+  padding: 0 48px;
+}
+
+/* 클래식 태그 — 분홍/핑크 pill */
+.hero-tag {
+  display: inline-block;
+  font-size: 12px;
+  font-weight: 600;
+  color: #fff;
+  background: #c9607a;
+  padding: 5px 14px;
+  border-radius: 20px;
+  margin-bottom: 14px;
+  letter-spacing: 0.03em;
+}
+
+.hero-title {
+  font-size: 56px;
+  font-weight: 700;
+  color: #fff;
+  line-height: 1.15;
+  margin-bottom: 10px;
+}
+
+.hero-sub {
+  font-size: 15px;
+  color: rgba(255,255,255,0.70);
+  font-weight: 300;
+  margin-bottom: 22px;
+}
+
+.hero-meta {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  flex-wrap: wrap;
+}
+
+.hero-meta-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 14px;
+  color: rgba(255,255,255,0.90);
+}
+
+.hero-meta-item img {
+  width: 15px;
+  height: 15px;
+  object-fit: contain;
+  filter: brightness(0) invert(1);
+  opacity: 0.75;
+}
+
+/* ============ 하단 고정 바 ============ */
+.sticky-bar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: #111;
+  z-index: 800;
+  padding: 14px 0;
+}
+
+.sticky-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+/* 정보 영역: 한 줄 가로 나열 */
+.sticky-info {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+  min-width: 0;
+}
+
+.sticky-title {
+  font-size: 16px;
+  font-weight: 700;
+  color: #fff;
+  white-space: nowrap;
+}
+
+.sticky-date {
+  font-size: 14px;
+  color: rgba(255,255,255,0.55);
+  white-space: nowrap;
+}
+
+.sticky-price {
+  font-size: 14px;
+  font-weight: 700;
+  color: #b8975a;
+  white-space: nowrap;
+}
+
+/* 버튼 영역 */
+.sticky-btns {
+  display: flex;
+  gap: 10px;
+  flex-shrink: 0;
+}
+
+.sticky-btn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 10px 26px;
+  border-radius: 50px;
+  font-size: 14px;
+  font-weight: 600;
+  white-space: nowrap;
+  transition: opacity 0.2s;
+}
+
+.sticky-btn:hover {
+  opacity: 0.85;
+}
+
+.sticky-btn--wish {
+  border: 1.5px solid rgba(255,255,255,0.5);
+  color: #fff;
+  background: transparent;
+}
+
+.sticky-btn--reserve {
+  background: #b8975a;
+  color: #fff;
+  border: 1.5px solid #b8975a;
+}
+
+/* ============ 상세 본문 ============ */
+.detail-body {
+  padding: 40px 0 120px; /* 120px: sticky-bar 높이 확보 */
+}
+
+.detail-layout {
+  display: flex;
+  align-items: flex-start;
+  gap: 40px;
+}
+
+/* ============ 좌측 콘텐츠 ============ */
+.detail-left {
+  flex: 1;
+  min-width: 0;
+}
+
+.detail-section {
+  padding: 36px 0;
+  border-bottom: 1px solid #e8e6e0;
+}
+
+.detail-section:first-child {
+  padding-top: 0;
+}
+
+.detail-section-title {
+  font-size: 15px;
+  color: #D7AD5A;
+  letter-spacing: 0.05em;
+  margin-bottom: 20px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid #e8e6e0;
+}
+
+/* 공연 개요 */
+.detail-overview-heading {
+  font-size: 23px;
+  font-weight: 300;
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+
+.detail-overview-text {
+  font-size: 15px;
+  color: #555;
+  line-height: 1.9;
+  margin-bottom: 14px;
+  font-weight: 300;
+}
+
+.detail-overview-text:last-child {
+  margin-bottom: 0;
+}
+
+/* 공연 정보 테이블 */
+.info-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.info-table tr {
+  border-bottom: 1px solid #f0ede8;
+}
+
+.info-table th {
+  width: 130px;
+  padding: 14px 0;
+  font-size: 14px;
+  color: #999;
+  font-weight: 500;
+  text-align: left;
+  vertical-align: top;
+  white-space: nowrap;
+}
+
+.info-table td {
+  padding: 14px 0;
+  font-size: 14px;
+  color: #666;
+  line-height: 1.6;
+}
+
+.info-tag {
+  display: inline-block;
+  font-size: 12px;
+  color: #666;
+  border: 1px solid #aaa;
+  border-radius: 12px;
+  padding: 3px 12px;
+  margin-right: 6px;
+  background: #ddd;
+}
+
+/* 프로그램 */
+.program-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.program-item {
+  display: flex;
+  align-items: center;
+  padding: 16px 0;
+  border-bottom: 1px solid #f0ede8;
+  gap: 10px;
+}
+
+.program-item:last-child {
+  border-bottom: none;
+}
+
+.program-num {
+  font-size: 13px;
+  color: #b8975a;
+  font-weight: 700;
+  flex-shrink: 0;
+  width: 24px;
+}
+
+.program-name {
+  flex: 1;
+  font-size: 15px;
+  margin-left: 73px;
+}
+
+.program-time {
+  font-size: 13px;
+  color: #999;
+  flex-shrink: 0;
+}
+
+/* 출연진 */
+.cast-list {
+  display: flex;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.cast-item {
+  text-align: center;
+  width: 140px;
+}
+
+.cast-photo {
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin: 0 auto 12px;
+  border: 1px solid #e8e6e0;
+}
+
+.cast-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.cast-name {
+  font-size: 15px;
+  font-weight: 700;
+  color: #111;
+  margin-bottom: 4px;
+}
+
+.cast-role {
+  font-size: 12px;
+  color: #888;
+}
+
+/* 공연장 안내 */
+.venue-map {
+  width: 100%;
+  height: 220px;
+  border-radius: 8px;
+  overflow: hidden;
+  margin-bottom: 14px;
+}
+
+.venue-map iframe {
+  width: 100%;
+  height: 100%;
+  display: block;
+  border: 0;
+}
+
+.venue-name-text {
+  font-size: 15px;
+  font-weight: 700;
+  color: #111;
+  margin-bottom: 4px;
+}
+
+.venue-addr {
+  font-size: 13px;
+  color: #666;
+  margin-bottom: 10px;
+}
+
+.venue-more-link {
+  font-size: 13px;
+  color: #b8975a;
+  transition: opacity 0.2s;
+}
+
+.venue-more-link:hover {
+  opacity: 0.75;
+}
+
+/* SNS 공유 바 */
+.share-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 28px 0;
+}
+
+.share-icons {
+  display: flex;
+  gap: 10px;
+}
+
+.share-icon {
+  width: 38px;
+  height: 38px;
+  border: 1px solid #ddd;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 15px;
+  color: #555;
+  transition: background 0.2s, color 0.2s;
+}
+
+.share-icon:hover {
+  background: #f0ede6;
+  color: #333;
+}
+
+.wish-btn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 14px;
+  color: #444;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  padding: 9px 20px;
+  background: #fff;
+  cursor: pointer;
+  font-family: inherit;
+  transition: background 0.2s;
+}
+
+.wish-btn:hover {
+  background: #f7f4f0;
+}
+
+.wish-btn.liked i {
+  font-weight: 900;
+  color: #e03232;
+}
+
+/* ============ 우측 예매 박스 ============ */
+.detail-right {
+  width: 340px;
+  flex-shrink: 0;
+  position: sticky;
+  top: 80px;
+}
+
+.booking-box {
+  border-radius: 12px;
+  overflow: hidden;
+  background: #fff;
+  border: 1px solid #e0ddd6;
+}
+
+/* 헤더 (검정 배경) */
+.booking-header {
+  background: #111;
+  padding: 22px 24px 18px;
+}
+
+.booking-title {
+  font-size: 22px;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 6px;
+}
+
+.booking-subtitle {
+  font-size: 13px;
+  color: #888;
+}
+
+/* 바디 */
+.booking-body {
+  padding: 20px 24px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+/* 날짜 카드 */
+.booking-date-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #f5eed8;
+  border: 1.5px solid #d7b97a;
+  border-radius: 10px;
+  padding: 16px 18px;
+  margin-bottom: 24px;
+}
+
+.booking-date-main {
+  font-size: 15px;
+  font-weight: 700;
+  color: #111;
+  margin-bottom: 4px;
+}
+
+.booking-date-time {
+  font-size: 13px;
+  color: #888;
+}
+
+.booking-remain {
+  font-size: 13px;
+  font-weight: 700;
+  color: #e07820;
+  white-space: nowrap;
+  font-family: 'Malgun Gothic';
+}
+
+/* 가격 */
+.booking-price-list {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 24px;
+}
+
+.booking-price-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 0;
+  border-bottom: 1px solid #ece9e3;
+}
+
+.booking-price-item:first-child {
+  border-top: 1px solid #ece9e3;
+}
+
+.bp-label {
+  font-size: 14px;
+  color: #555;
+}
+
+.bp-price {
+  font-size: 15px;
+  font-weight: 700;
+  color: #111;
+}
+
+/* 버튼 */
+.booking-btn {
+  display: block;
+  text-align: center;
+  padding: 15px;
+  font-size: 15px;
+  font-weight: 700;
+  border-radius: 8px;
+  transition: opacity 0.2s;
+  margin-bottom: 10px;
+}
+
+.booking-btn:last-of-type {
+  margin-bottom: 20px;
+}
+
+.booking-btn:hover {
+  opacity: 0.85;
+}
+
+.booking-btn--reserve {
+  background: #b8975a;
+  color: #fff;
+}
+
+.booking-btn--inquiry {
+  border: 1.5px solid #ccc;
+  color: #333;
+  background: #fff;
+  font-weight: 600;
+}
+
+/* 유의사항 */
+.booking-notice {
+  background: #f5f4f1;
+  border-radius: 8px;
+  padding: 16px 18px;
+}
+
+.booking-notice-title {
+  font-size: 13px;
+  font-weight: 700;
+  color: #555;
+  margin-bottom: 10px;
+}
+
+.booking-notice-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.booking-notice-list li {
+  font-size: 12px;
+  color: #777;
+  line-height: 1.6;
+  padding-left: 12px;
+  position: relative;
+}
+
+.booking-notice-list li::before {
+  content: '·';
+  position: absolute;
+  left: 0;
+  color: #999;
+  font-weight: 700;
+}
+
+/* ============ 반응형 ============ */
+@media (max-width: 900px) {
+  .detail-layout {
+    flex-direction: column;
+  }
+
+  .detail-right {
+    width: 100%;
+    position: static;
+  }
+
+  .booking-box {
+    display: block;
+  }
+}
+
+@media (max-width: 768px) {
+  .detail-hero {
+    height: 360px;
+  }
+
+  .hero-title {
+    font-size: 28px;
+  }
+
+  .hero-meta {
+    gap: 14px;
+  }
+
+  .hero-meta-item {
+    font-size: 12px;
+  }
+
+  .sticky-title {
+    font-size: 14px;
+  }
+
+  .sticky-date {
+    display: none;
+  }
+
+  .sticky-btn {
+    padding: 8px 16px;
+    font-size: 13px;
+  }
+
+  .cast-list {
+    gap: 16px;
+  }
+
+  .cast-item {
+    width: 100px;
+  }
+
+  .cast-photo {
+    width: 80px;
+    height: 80px;
+  }
+
+  .header-nav ul li a.on::after {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .detail-hero {
+    height: 280px;
+  }
+
+  .hero-title {
+    font-size: 22px;
+  }
+
+  .hero-meta {
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  .sticky-date,
+  .sticky-price {
+    display: none;
+  }
+
+  .share-bar {
+    flex-direction: column;
+    gap: 16px;
+    align-items: flex-start;
+  }
+}

@@ -1,11 +1,360 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>성남문화재단</title>
+  <title>BBC 심포니 오케스트라 - 성남문화재단</title>
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/header.css">
+  <link rel="stylesheet" href="css/footer.css">
+  <link rel="stylesheet" href="css/subpage2.css">
+  <script src="https://kit.fontawesome.com/1cd9cbfb2d.js" crossorigin="anonymous"></script>
 </head>
 <body>
-  
+
+  <header>
+    <div class="container">
+      <a href="index.html" class="header-logo">
+        <img src="img/symbol/logo-header.png" alt="성남문화재단">
+      </a>
+      <nav class="header-nav" id="headerNav">
+        <ul>
+          <li><a href="subpage1.html" class="on">공연/전시</a></li>
+          <li><a href="#">문화예술교육</a></li>
+          <li><a href="#">지원사업</a></li>
+          <li><a href="#">운영시설</a></li>
+          <li><a href="#">소식알림</a></li>
+          <li><a href="#">성남문화재단</a></li>
+        </ul>
+      </nav>
+      <div class="header-auth">
+        <a href="#">로그인</a>
+        <span class="divider">|</span>
+        <a href="#">회원가입</a>
+      </div>
+      <button class="hamburger" id="hamburger" aria-label="메뉴 열기">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- 브레드크럼 -->
+    <div class="breadcrumb">
+      <div class="container">
+        <a href="index.html">홈</a>
+        <span class="bc-arrow"><i class="fa-solid fa-angle-right"></i></span>
+        <a href="subpage1.html">공연/전시</a>
+        <span class="bc-arrow"><i class="fa-solid fa-angle-right"></i></span>
+        <a href="subpage1.html">공연</a>
+        <span class="bc-arrow"><i class="fa-solid fa-angle-right"></i></span>
+        <span class="bc-current">BBC 심포니 오케스트라</span>
+      </div>
+    </div>
+
+    <!-- 히어로 배너 -->
+    <section class="detail-hero">
+      <div class="hero-img-wrap">
+        <img src="img/sub2/banner.png" alt="BBC 심포니 오케스트라">
+        <div class="hero-overlay"></div>
+      </div>
+      <div class="hero-content container">
+        <span class="hero-tag">클래식</span>
+        <h1 class="hero-title">BBC 심포니 오케스트라</h1>
+        <p class="hero-sub">최희준 · 이진상 · 한석준</p>
+        <div class="hero-meta">
+          <span class="hero-meta-item">
+            <img src="img/symbol/Calender-gray.png" alt="">
+            2026.03.19(목) 11:00
+          </span>
+          <span class="hero-meta-item">
+            <img src="img/symbol/gps.png" alt="">
+            성남아트센터 콘서트홀
+          </span>
+          <span class="hero-meta-item">
+            <img src="img/symbol/watch.png" alt="">
+            약 90분
+          </span>
+        </div>
+      </div>
+    </section>
+
+    <!-- 하단 고정 바 -->
+    <div class="sticky-bar" id="stickyBar">
+      <div class="container sticky-inner">
+        <div class="sticky-info">
+          <span class="sticky-title">BBC 심포니 오케스트라</span>
+          <span class="sticky-date">2026.03~12 매월 셋째주 목 11:00</span>
+          <span class="sticky-price">전석 25,000원~</span>
+        </div>
+        <div class="sticky-btns">
+          <a href="#" class="sticky-btn sticky-btn--wish">
+            찜하기 <i class="fa-regular fa-heart"></i>
+          </a>
+          <a href="#" class="sticky-btn sticky-btn--reserve">예매하기</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- 상세 본문 -->
+    <section class="detail-body">
+      <div class="container">
+        <div class="detail-layout">
+
+          <!-- 좌측 콘텐츠 -->
+          <div class="detail-left">
+
+            <!-- 공연 개요 -->
+            <div class="detail-section">
+              <h2 class="detail-section-title">공연 개요</h2>
+              <h3 class="detail-overview-heading">아나운서 한석준이 들려주는<br>클래식 이야기</h3>
+              <p class="detail-overview-text">
+                2026~2027년 성남아트센터 마티네 콘서트가 드디어 21년째 결실 독일 음악을 선보입니다. 지난 몇 년간 영국, 이탈리아, 보헤미아, 오스트리아에 거친 음악 여행의 이번에는 독일로 떠납니다. 오스트리아에 거친 음악 여행의 이번에는 독일로 떠납니다. 독일음악 관련 사에 고전 음악의 전반적인 요일하고, 오케스트라와 클래스에서 거친 음악 관련 음악이 나비입니다.
+              </p>
+              <p class="detail-overview-text">
+                르네상스 시대까지 서양 음악의 발전에 매불던 독일은 바로크 시대로 접어들면서 비로소 약진을 시작했습니다. 이탈리아와 프랑스 음악의 영향을 적극적으로 받아들였고, 그것 가운 여서 나라로 나봐여 총국 다양양의 균형된 환경은 독특하고 다채로운 음악 문화를 꽃피우는 토대가 되었습니다. 18세기에 점어들에 바로크 바름된 위대한 대가들이 여러 나라의 음악을 총합하여 독일 음악의 특성과 서양 음악의 주인공으로 꽃을피고, 아이 고전주의와 낭만주의 음악을 '거쳐 다른 나라가 되고, 모방하고, 극복해야 하는 모범이 되었습니다.
+              </p>
+              <p class="detail-overview-text">
+                마티네 콘서트에서는 근대 음악 역사 그 지배력 할 수 있는 독일 음악 4세기의 여정을 담았습니다. '독일 음악의 여마디' 라는 라이 시즌에서 시작해, 바로크 시대 드레스덴 궁정의 음악과 유한 콘서트가든를 완성하고 낭만주의의 정을 완 매 티벨과 베버, 낭만주의 활성기를 이끈 멘젤스존과 슈만, 서로 다른 길로 음악을 하했었던 바그너와 브람스, 그리고 독일 낭만주의의 황혼을 장식한 리하르트 슈트라우스까지 관객 여러분을 '닫'합니다.
+              </p>
+              <p class="detail-overview-text">
+                2026 마티네 콘서트의 부제는 '독일, 음악의 숲'입니다. 독일 사람들이 숲을 사랑하는 만큼, 그 안에는 깊고 그윽한 음악 유산과 전통이 가득히 존재합니다. 성남 마티네 콘서트와 함께 울창한 독일 음악의 숲을 '닫'러 여행 어떨까요?
+              </p>
+            </div>
+
+            <!-- 공연 정보 -->
+            <div class="detail-section">
+              <h2 class="detail-section-title">공연 정보</h2>
+              <table class="info-table">
+                <tbody>
+                  <tr>
+                    <th>공연명</th>
+                    <td>마티네 콘서트</td>
+                  </tr>
+                  <tr>
+                    <th>공연일시</th>
+                    <td>2026년 3월~12월 매월 셋째주 (목) 오전 11시</td>
+                  </tr>
+                  <tr>
+                    <th>장소</th>
+                    <td>성남아트센터 콘서트홀</td>
+                  </tr>
+                  <tr>
+                    <th>공연시간</th>
+                    <td>약 90분</td>
+                  </tr>
+                  <tr>
+                    <th>주최 · 주관</th>
+                    <td>성남문화재단</td>
+                  </tr>
+                  <tr>
+                    <th>관람연령</th>
+                    <td>8세 이상 (미취학 아동 입장 불가)</td>
+                  </tr>
+                  <tr>
+                    <th>장르</th>
+                    <td>
+                      <span class="info-tag">클래식</span>
+                      <span class="info-tag">오케스트라</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th>할인</th>
+                    <td>성남 다자녀 가정 20% · 장애인 · 국가유공자 50% · 36개월 미만 입장불가</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <!-- 프로그램 -->
+            <div class="detail-section">
+              <h2 class="detail-section-title">프로그램</h2>
+              <ul class="program-list">
+                <li class="program-item">
+                  <span class="program-num">01</span>
+                  <span class="program-name">베토벤 &lt;피델리오&gt; 서곡 Op. 72c</span>
+                  <span class="program-time">약 30분</span>
+                </li>
+                <li class="program-item">
+                  <span class="program-num">02</span>
+                  <span class="program-name">베토벤 피아노 협주곡 4번 G장조 Op. 58</span>
+                  <span class="program-time">약 30분</span>
+                </li>
+                <li class="program-item">
+                  <span class="program-num">03</span>
+                  <span class="program-name">베토벤 교향곡 7번 A장조 Op. 92</span>
+                  <span class="program-time">약 30분</span>
+                </li>
+              </ul>
+            </div>
+
+            <!-- 출연진 -->
+            <div class="detail-section">
+              <h2 class="detail-section-title">출연진</h2>
+              <div class="cast-list">
+                <div class="cast-item">
+                  <div class="cast-photo">
+                    <img src="img/sub2/mr.choi.png" alt="최희준">
+                  </div>
+                  <p class="cast-name">최희준</p>
+                  <p class="cast-role">지휘 · Conductor</p>
+                </div>
+                <div class="cast-item">
+                  <div class="cast-photo">
+                    <img src="img/sub2/mr.lee.png" alt="이진상">
+                  </div>
+                  <p class="cast-name">이진상</p>
+                  <p class="cast-role">피아노 · Piano</p>
+                </div>
+                <div class="cast-item">
+                  <div class="cast-photo">
+                    <img src="img/sub2/mr.han.png" alt="한석준">
+                  </div>
+                  <p class="cast-name">한석준</p>
+                  <p class="cast-role">사회 · MC</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- 공연장 안내 -->
+            <div class="detail-section">
+              <h2 class="detail-section-title">공연장 안내</h2>
+              <div class="venue-map">
+                <iframe
+                  src="https://maps.google.com/maps?q=경기도+성남시+분당구+성남대로+808+성남아트센터&hl=ko&z=16&output=embed"
+                  width="100%"
+                  height="220"
+                  style="border:0;"
+                  allowfullscreen=""
+                  loading="lazy"
+                  referrerpolicy="no-referrer-when-downgrade"
+                  title="성남아트센터 콘서트홀 위치">
+                </iframe>
+              </div>
+              <p class="venue-name-text">성남아트센터 콘서트홀</p>
+              <p class="venue-addr">경기도 성남시 분당구 성남대로 808(야탑동)</p>
+              <a href="https://www.snart.or.kr/main/content/view.do?sn=63" class="venue-more-link">홈페이지로 보기 →</a>
+            </div>
+
+            <!-- SNS 공유 -->
+            <div class="share-bar">
+              <div class="share-icons">
+                <a href="#" class="share-icon" aria-label="페이스북 공유">
+                  <i class="fa-brands fa-facebook-f"></i>
+                </a>
+                <a href="#" class="share-icon" aria-label="인스타그램">
+                  <i class="fa-brands fa-instagram"></i>
+                </a>
+                <a href="#" class="share-icon" aria-label="X(트위터) 공유">
+                  <i class="fa-brands fa-x-twitter"></i>
+                </a>
+                <a href="#" class="share-icon" aria-label="링크 공유">
+                  <i class="fa-solid fa-arrow-up-from-bracket"></i>
+                </a>
+              </div>
+              <button class="wish-btn" id="wishBtn" aria-label="찜하기">
+                <i class="fa-regular fa-heart"></i> 찜하기
+              </button>
+            </div>
+
+          </div>
+
+          <!-- 우측 예매 박스 -->
+          <aside class="detail-right" id="bookingBox">
+            <div class="booking-box">
+
+              <!-- 헤더 -->
+              <div class="booking-header">
+                <h3 class="booking-title">공연 예매</h3>
+                <p class="booking-subtitle">날짜를 선택하세요</p>
+              </div>
+
+              <!-- 날짜 선택 -->
+              <div class="booking-body">
+                <div class="booking-date-card">
+                  <div class="booking-date-left">
+                    <p class="booking-date-main">2026.03.19(목)</p>
+                    <p class="booking-date-time">11:00</p>
+                  </div>
+                  <span class="booking-remain">잔여석 少</span>
+                </div>
+
+                <!-- 가격 -->
+                <div class="booking-price-list">
+                  <div class="booking-price-item">
+                    <span class="bp-label">시즌권 전석</span>
+                    <span class="bp-price">200,000원</span>
+                  </div>
+                  <div class="booking-price-item">
+                    <span class="bp-label">일반권 전석</span>
+                    <span class="bp-price">25,000원</span>
+                  </div>
+                </div>
+
+                <!-- 버튼 -->
+                <a href="#" class="booking-btn booking-btn--reserve">예매하기</a>
+                <a href="#" class="booking-btn booking-btn--inquiry">문의하기</a>
+
+                <!-- 유의사항 -->
+                <div class="booking-notice">
+                  <h4 class="booking-notice-title">유의사항</h4>
+                  <ul class="booking-notice-list">
+                    <li>공연시작 10분 전 입장마감</li>
+                    <li>예매 취소 : 공연 3일 전까지 수수료 없음</li>
+                    <li>공연 당일 취소 불가</li>
+                    <li>문의 : 031-783-8000</li>
+                  </ul>
+                </div>
+              </div>
+
+            </div>
+          </aside>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="footer-top">
+      <div class="container">
+        <a href="#" class="footer-top-link">개인정보처리방침</a>
+        <a href="#" class="footer-top-link">저작권보호정책</a>
+        <a href="#" class="footer-top-link">영상정보처리기기운영 / 관리방침</a>
+        <a href="#" class="footer-top-link">이메일무단수집거부</a>
+        <p class="footer-top-contact">예매문의 <span>1544-8117</span></p>
+        <p class="footer-top-contact">일반문의 <span>031-783-8000</span></p>
+        <p class="footer-top-contact">팩스번호 <span>031-783-8160</span></p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container">
+        <div class="footer-bottom-inner">
+          <a href="index.html" class="footer-logo">
+            <img src="img/symbol/logo-footer.png" alt="성남문화재단">
+          </a>
+          <div class="footer-info">
+            <p class="footer-address">(13514) 경기도 성남시 분당구 성남대로 808 (야탑동)</p>
+            <div class="footer-meta">
+              <span>재단법인 성남문화재단</span>
+              <span class="footer-meta-divider">|</span>
+              <span>사업자등록번호 129-82-07974</span>
+              <span class="footer-meta-divider">|</span>
+              <span>통신판매업신고 제2006-경기성남-674호</span>
+              <span class="footer-meta-divider">|</span>
+              <button class="footer-biz-btn">사업자정보확인</button>
+            </div>
+            <p class="footer-copy">Copyright© Seongnam Cultural Foundation All Rights Reserved.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/subpage2.js"></script>
 </body>
 </html>

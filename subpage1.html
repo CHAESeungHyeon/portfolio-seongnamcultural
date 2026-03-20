@@ -1,11 +1,387 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>성남문화재단</title>
+  <title>공연/전시 - 성남문화재단</title>
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/header.css">
+  <link rel="stylesheet" href="css/footer.css">
+  <link rel="stylesheet" href="css/subpage1.css">
+  <script src="https://kit.fontawesome.com/1cd9cbfb2d.js" crossorigin="anonymous"></script>
 </head>
 <body>
-  
+
+  <header>
+    <div class="container">
+      <a href="index.html" class="header-logo">
+        <img src="img/symbol/logo-header.png" alt="성남문화재단">
+      </a>
+      <nav class="header-nav" id="headerNav">
+        <ul>
+          <li><a href="subpage1.html" class="on">공연 / 전시</a></li>
+          <li><a href="#">문화예술교육</a></li>
+          <li><a href="#">지원사업</a></li>
+          <li><a href="#">운영시설</a></li>
+          <li><a href="#">소식알림</a></li>
+          <li><a href="#">성남문화재단</a></li>
+        </ul>
+      </nav>
+      <div class="header-auth">
+        <a href="#">로그인</a>
+        <span class="divider">|</span>
+        <a href="#">회원가입</a>
+      </div>
+      <button class="hamburger" id="hamburger" aria-label="메뉴 열기">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <aside class="side-nav" id="sideNav">
+    <a href="#" class="side-nav-item">
+      <img src="img/symbol/keybord.png" alt="아카데미 교육신청">
+      <span>아카데미<br>교육신청</span>
+    </a>
+    <a href="#" class="side-nav-item">
+      <img src="img/symbol/flatfrom.png" alt="예술인지원 플랫폼">
+      <span>예술인지원<br>플랫폼</span>
+    </a>
+  </aside>
+
+  <main>
+
+    <!-- 검색 -->
+    <section id="search">
+      <div class="container">
+        <input type="text" placeholder="어떤 공연/전시을(를) 검색하시겠어요?">
+        <button class="search-btn" aria-label="검색">
+          <img src="img/symbol/search.png" alt="검색">
+        </button>
+      </div>
+    </section>
+
+    <!-- 공연/전시 헤더 섹션 -->
+    <section id="perf-nav-section">
+      <div class="container">
+        <h1 class="page-title">공연 / 전시</h1>
+        <nav class="page-nav">
+          <ul>
+            <li><a href="#" class="on">공연</a></li>
+            <li><a href="#">전시</a></li>
+            <li><a href="#">캘린더</a></li>
+            <li><a href="#">좌석배치도</a></li>
+            <li><a href="#">예매안내</a></li>
+            <li><a href="#">관람예정</a></li>
+            <li><a href="#">관람후기</a></li>
+          </ul>
+        </nav>
+      </div>
+      <div class="genre-nav-wrap">
+        <div class="container">
+          <ul class="genre-nav">
+            <li><a href="#" class="active">전체</a></li>
+            <li><a href="#">클래식</a></li>
+            <li><a href="#">오페라</a></li>
+            <li><a href="#">뮤지컬</a></li>
+            <li><a href="#">연극</a></li>
+            <li><a href="#">무용</a></li>
+            <li><a href="#">국악</a></li>
+            <li><a href="#">팝 · 록</a></li>
+            <li><a href="#">가족 · 어린이</a></li>
+            <li><a href="#">특별공연</a></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- 게시물 영역 -->
+    <section id="perf-content">
+
+      <!-- 컨트롤 바 (풀너비) -->
+      <div class="content-controlbar">
+        <div class="container controlbar-inner">
+          <p class="controlbar-count">총 124개의 공연</p>
+          <div class="controlbar-right">
+            <button class="sort-btn">
+              날짜순
+              <img src="img/symbol/bottom.png" alt="정렬">
+            </button>
+            <button class="view-btn active" id="viewGrid" aria-label="그리드 보기">
+              <img src="img/symbol/cube.png" alt="그리드">
+            </button>
+            <button class="view-btn" id="viewList" aria-label="목록 보기">
+              <img src="img/symbol/hamburger.png" alt="목록">
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="container">
+        <div class="content-layout">
+
+          <!-- 좌측 필터 사이드바 -->
+          <aside class="filter-sidebar">
+            <div class="filter-group">
+              <h3 class="filter-title">공연장</h3>
+              <ul class="filter-list">
+                <li><label><input type="checkbox"> <span class="filter-dot" style="background:#e05555;"></span> 성남아트센터 <span class="filter-count">46</span></label></li>
+                <li><label><input type="checkbox"> <span class="filter-dot" style="background:#5591e0;"></span> 성남아트리움 <span class="filter-count">36</span></label></li>
+                <li><label><input type="checkbox"> <span class="filter-dot" style="background:#55b855;"></span> 성남큐브미술관 <span class="filter-count">23</span></label></li>
+                <li><label><input type="checkbox"> <span class="filter-dot" style="background:#e0c455;"></span> 해외 <span class="filter-count">19</span></label></li>
+              </ul>
+            </div>
+            <div class="filter-divider"></div>
+            <div class="filter-group">
+              <h3 class="filter-title">기간</h3>
+              <div class="filter-date">
+                <input type="date" value="2026-03-01">
+                <input type="date" value="2026-03-01">
+              </div>
+              <button class="filter-apply-btn">적용</button>
+            </div>
+            <div class="filter-divider"></div>
+            <div class="filter-group">
+              <h3 class="filter-title">공연 유형</h3>
+              <ul class="filter-list">
+                <li><label><input type="checkbox"> 성남아트센터 <span class="filter-count">21</span></label></li>
+                <li><label><input type="checkbox"> 성남아트리움 <span class="filter-count">8</span></label></li>
+                <li><label><input type="checkbox"> 성남큐브미술관 <span class="filter-count">14</span></label></li>
+                <li><label><input type="checkbox"> 연극 · 뮤지컬 <span class="filter-count">19</span></label></li>
+                <li><label><input type="checkbox"> 가족 · 어린이 <span class="filter-count">12</span></label></li>
+                <li><label><input type="checkbox"> 특별공연 <span class="filter-count">9</span></label></li>
+              </ul>
+            </div>
+            <div class="filter-divider"></div>
+            <div class="filter-group">
+              <h3 class="filter-title">가격대</h3>
+              <ul class="filter-list">
+                <li><label><input type="checkbox"> 무료 <span class="filter-count">12</span></label></li>
+                <li><label><input type="checkbox"> 1만원 이하 <span class="filter-count">8</span></label></li>
+                <li><label><input type="checkbox"> 1~5만원 <span class="filter-count">45</span></label></li>
+                <li><label><input type="checkbox"> 5만원 이상 <span class="filter-count">27</span></label></li>
+              </ul>
+            </div>
+          </aside>
+
+          <!-- 중앙 콘텐츠 -->
+          <div class="content-main">
+
+            <!-- 상단 피처드 카드 2개 -->
+            <div class="featured-cards">
+              <div class="featured-card">
+                <div class="card-img-wrap">
+                  <span class="card-tag tag--classic">클래식</span>
+                  <img src="img/sub1/top-card (1).png" alt="마티네콘서트">
+                </div>
+                <div class="card-info">
+                  <p class="card-venue">성남아트센터 콘서트홀</p>
+                  <p class="card-title">마티네콘서트</p>
+                  <p class="card-date">2026.03 · Monthly Third Tue 11:00</p>
+                  <div class="card-bottom">
+                    <p class="card-price">일반권 전석 25,000원~</p>
+                    <a href="subpage2.html" class="card-btn">예매하기</a>
+                  </div>
+                </div>
+              </div>
+              <div class="featured-card">
+                <div class="card-img-wrap">
+                  <span class="card-tag tag--play">연극</span>
+                  <img src="img/sub1/top-card (2).png" alt="연·극·만·원 들꽃">
+                </div>
+                <div class="card-info">
+                  <p class="card-venue">성남아트센터 앙상블시어터</p>
+                  <p class="card-title">연·극·만·원 들꽃</p>
+                  <p class="card-date">2026.08.28 · Fri 14:00 &amp; 19:30<br>2026.08.29 · Sat 14:00 &amp; 19:30</p>
+                  <div class="card-bottom">
+                    <p class="card-price">전석 30,000원~</p>
+                    <a href="#" class="card-btn">예매하기</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- 이달의 공연 -->
+            <div class="monthly-section">
+              <h2 class="monthly-title">이달의 공연</h2>
+              <div class="card-grid">
+
+                <div class="perf-card">
+                  <div class="card-img-wrap">
+                    <span class="card-tag tag--play">연극</span>
+                    <img src="img/sub1/bot-card (1).png" alt="연·극·만·원 탬블">
+                  </div>
+                  <div class="card-info">
+                    <p class="card-venue">성남아트센터 앙상블시어터</p>
+                    <p class="card-title">연·극·만·원 탬블</p>
+                    <p class="card-date">2026.02.27 · Fri 14:00 &amp; 19:30<br>2026.02.28 · Sat 14:00 &amp; 19:30</p>
+                    <div class="card-bottom">
+                      <p class="card-price">전석 40,000원~</p>
+                      <a href="#" class="card-btn">예매하기</a>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="perf-card">
+                  <div class="card-img-wrap">
+                    <span class="card-tag tag--classic">클래식</span>
+                    <img src="img/sub1/bot-card (2).png" alt="K-POP으로 만나는 클래식">
+                  </div>
+                  <div class="card-info">
+                    <p class="card-venue">성남아트리움 대공연장</p>
+                    <p class="card-title">K-POP으로 만나는 클래식</p>
+                    <p class="card-date">2026.04.11 · Sat 11:00, 15:00<br>성남아트리움 대공연장</p>
+                    <div class="card-bottom">
+                      <p class="card-price">전석 30,000원~</p>
+                      <a href="#" class="card-btn">예매하기</a>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="perf-card">
+                  <div class="card-img-wrap">
+                    <span class="card-tag tag--gugak">국악</span>
+                    <img src="img/sub1/bot-card (3).png" alt="이자람 판소리 눈·눈·눈">
+                  </div>
+                  <div class="card-info">
+                    <p class="card-venue">성남아트센터 오페라하우스</p>
+                    <p class="card-title">이자람 판소리 눈·눈·눈</p>
+                    <p class="card-date">2026.03.23 · Sat 17:30</p>
+                    <div class="card-bottom">
+                      <p class="card-price">전석 50,000원~</p>
+                      <a href="#" class="card-btn">예매하기</a>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="perf-card">
+                  <div class="card-img-wrap">
+                    <span class="card-tag tag--opera">오페라</span>
+                    <img src="img/sub1/bot-card (4).png" alt="오·페·라·정·원">
+                  </div>
+                  <div class="card-info">
+                    <p class="card-venue">성남아트센터 콘서트홀</p>
+                    <p class="card-title">오·페·라·정·원 카발레리아 루스티카나</p>
+                    <p class="card-date">2026.04.10 · Sat 19:30</p>
+                    <div class="card-bottom">
+                      <p class="card-price">전석 40,000원~</p>
+                      <a href="#" class="card-btn">예매하기</a>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="perf-card">
+                  <div class="card-img-wrap">
+                    <span class="card-tag tag--classic">클래식</span>
+                    <img src="img/sub1/bot-card (5).png" alt="엘리자베트 레온스카야">
+                  </div>
+                  <div class="card-info">
+                    <p class="card-venue">성남아트센터 콘서트홀</p>
+                    <p class="card-title">엘리자베트 레온스카야 피아노 리사이틀</p>
+                    <p class="card-date">2026.02.28 · Sat 19:30</p>
+                    <div class="card-bottom">
+                      <p class="card-price">전석 80,000원~</p>
+                      <a href="#" class="card-btn">예매하기</a>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="perf-card">
+                  <div class="card-img-wrap">
+                    <span class="card-tag tag--classic">클래식</span>
+                    <img src="img/sub1/bot-card (6).png" alt="BBC심포니오케스트라">
+                  </div>
+                  <div class="card-info">
+                    <p class="card-venue">성남아트센터 콘서트홀</p>
+                    <p class="card-title">BBC 심포니오케스트라</p>
+                    <p class="card-date">2026.03.28 · Sat 17:30</p>
+                    <div class="card-bottom">
+                      <p class="card-price">전석 80,000원~</p>
+                      <a href="#" class="card-btn">예매하기</a>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+
+              <!-- 페이지네이션 -->
+              <div class="pagination">
+                <a href="subpage1.html?page=1" class="page-arrow" aria-label="이전 페이지">
+                  <img src="img/symbol/left.png" alt="이전">
+                </a>
+                <a href="subpage1.html?page=1" class="page-num active">1</a>
+                <a href="subpage1.html?page=2" class="page-num">2</a>
+                <a href="subpage1.html?page=3" class="page-num">3</a>
+                <a href="subpage1.html?page=4" class="page-num">4</a>
+                <a href="subpage1.html?page=5" class="page-num">5</a>
+                <a href="subpage1.html?page=2" class="page-arrow" aria-label="다음 페이지">
+                  <img src="img/symbol/right.png" alt="다음">
+                </a>
+              </div>
+
+            </div>
+
+          </div>
+
+          <!-- 우측 사이드 네비 -->
+          <div class="content-sidenav">
+            <a href="#" class="content-side-item">
+              <img src="img/symbol/keybord.png" alt="아카데미 교육신청">
+              <span>아카데미<br>교육신청</span>
+            </a>
+            <a href="#" class="content-side-item">
+              <img src="img/symbol/flatfrom.png" alt="예술인지원 플랫폼">
+              <span>예술인지원<br>플랫폼</span>
+            </a>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <!-- 상단 링크 바 -->
+    <div class="footer-top">
+      <div class="container">
+        <a href="#" class="footer-top-link">개인정보처리방침</a>
+        <a href="#" class="footer-top-link">저작권보호정책</a>
+        <a href="#" class="footer-top-link">영상정보처리기기운영 / 관리방침</a>
+        <a href="#" class="footer-top-link">이메일무단수집거부</a>
+        <p class="footer-top-contact">예매문의 <span>1544-8117</span></p>
+        <p class="footer-top-contact">일반문의 <span>031-783-8000</span></p>
+        <p class="footer-top-contact">팩스번호 <span>031-783-8160</span></p>
+      </div>
+    </div>
+    <!-- 하단 본문 -->
+    <div class="footer-bottom">
+      <div class="container">
+        <div class="footer-bottom-inner">
+          <a href="index.html" class="footer-logo">
+            <img src="img/symbol/logo-footer.png" alt="성남문화재단">
+          </a>
+          <div class="footer-info">
+            <p class="footer-address">(13514) 경기도 성남시 분당구 성남대로 808 (야탑동)</p>
+            <div class="footer-meta">
+              <span>재단법인 성남문화재단</span>
+              <span class="footer-meta-divider">|</span>
+              <span>사업자등록번호 129-82-07974</span>
+              <span class="footer-meta-divider">|</span>
+              <span>통신판매업신고 제2006-경기성남-674호</span>
+              <span class="footer-meta-divider">|</span>
+              <button class="footer-biz-btn">사업자정보확인</button>
+            </div>
+            <p class="footer-copy">Copyright© Seongnam Cultural Foundation All Rights Reserved.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/subpage1.js"></script>
+  <script src="js/header.js"></script>
 </body>
 </html>
