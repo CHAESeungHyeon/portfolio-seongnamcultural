@@ -252,7 +252,6 @@ main {
 
 .detail-section {
   padding: 36px 0;
-  border-bottom: 1px solid #e8e6e0;
 }
 
 .detail-section:first-child {
@@ -295,7 +294,7 @@ main {
 }
 
 .info-table tr {
-  border-bottom: 1px solid #f0ede8;
+  border-bottom: 1px solid #e8e6e0;
 }
 
 .info-table th {
@@ -338,7 +337,7 @@ main {
   display: flex;
   align-items: center;
   padding: 16px 0;
-  border-bottom: 1px solid #f0ede8;
+  border-bottom: 1px solid #e8e6e0;
   gap: 10px;
 }
 
@@ -369,6 +368,7 @@ main {
 /* 출연진 */
 .cast-list {
   display: flex;
+  justify-content: space-around;
   gap: 24px;
   flex-wrap: wrap;
 }

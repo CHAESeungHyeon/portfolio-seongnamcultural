@@ -16,7 +16,7 @@
   margin: 0;
   box-sizing: border-box;
   user-select: none;
-  color: #333;
+  color: #07080B;
   /* outline: 1px solid red; */
 }
 html{
@@ -57,5 +57,5 @@ button{
 main {
   width: 100%;
   margin:auto;
-  padding-top: 66px;
+  padding-top: 70px;
 }

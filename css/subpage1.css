@@ -8,7 +8,7 @@ main {
 
 /* ============ 검색 ============ */
 #search {
-  margin-top: 18px;
+  margin-top: 50px;
   display: flex;
   justify-content: center;
 }
@@ -30,7 +30,7 @@ main {
   border: none;
   background: transparent;
   margin-left: 30px;
-  font-size: 16px;
+  font-size: 18px;
   font-weight: 300;
   color: #333;
   outline: none;
@@ -49,20 +49,18 @@ main {
   margin-right: 46px;
   flex-shrink: 0;
   cursor: pointer;
-  background: none;
-  border: none;
-  padding: 0;
 }
 
 .search-btn img {
-  width: 24px;
-  height: 24px;
+  height: 20px;
+  width: auto;
+  display: block;
 }
 
 
 /* ============ 공연/전시 헤더 섹션 ============ */
 #perf-nav-section {
-  margin-top: 26px;
+  margin-top: 70px;
 }
 
 /* 페이지 타이틀 */
@@ -170,7 +168,12 @@ main {
   width: 239px;
   flex-shrink: 0;
   padding: 30px;
+  height: 100vh;
   background: #fff;
+  position: sticky;
+  top: 76px; /* 고정 헤더(66px) + 여백(10px) */
+  max-height: calc(100vh - 86px);
+  overflow-y: auto;
 }
 
 .filter-group {
@@ -534,7 +537,6 @@ main {
 .featured-cards {
   display: flex;
   gap: 10px;
-  margin-top: 30px;
 }
 
 .featured-card {
@@ -641,6 +643,9 @@ main {
   font-weight: 600;
 }
 
+
+/*  */
+footer{margin-top: 0;}
 /* ============ 반응형 1100px ============ */
 @media (max-width: 1200px) {
      /* 우측 고정 사이드 네비 숨김 */
