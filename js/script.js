@@ -37,7 +37,7 @@ const bannerData = [
     title: '마티네콘서트<br>독일, 음악의 숲',
     date: '2026-03 ~ 2026-12 (매달 셋째 주 목요일)',
     location: '성남아트센터 콘서트홀',
-    url: '#'
+    url: '../subpage2.html'
   },
   {
     img: 'img/index/main-swipe-banner (6).png',
@@ -352,29 +352,7 @@ const bannerData = [
 })();
 
 
-/* ============================================================
-   햄버거 메뉴
-   ============================================================ */
-(function () {
-  const hamburger = document.getElementById('hamburger');
-  const nav = document.getElementById('headerNav');
-
-  if (!hamburger || !nav) return;
-
-  hamburger.addEventListener('click', e => {
-    e.stopPropagation();
-    hamburger.classList.toggle('open');
-    nav.classList.toggle('open');
-    hamburger.setAttribute('aria-label', nav.classList.contains('open') ? '메뉴 닫기' : '메뉴 열기');
-  });
-
-  document.addEventListener('click', e => {
-    if (!hamburger.contains(e.target) && !nav.contains(e.target)) {
-      hamburger.classList.remove('open');
-      nav.classList.remove('open');
-    }
-  });
-})();
+/* 햄버거 메뉴 → js/header.js 로 분리 */
 
 
 /* ============================================================

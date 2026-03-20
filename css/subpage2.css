@@ -694,6 +694,14 @@ main {
   .detail-hero {
     height: 360px;
   }
+.hero-content {
+  position: absolute;
+  bottom: 10%;
+  left: 0;
+  width: 100%;
+  color: #fff;
+  padding: 0 48px;
+}
 
   .hero-title {
     font-size: 28px;
@@ -748,7 +756,7 @@ main {
   }
 
   .hero-meta {
-    flex-direction: column;
+    /* flex-direction: column; */
     gap: 6px;
   }
 

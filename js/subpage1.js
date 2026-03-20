@@ -1,29 +1,6 @@
 // subpage1.js - 공연/전시 페이지
 
-/* ============================================================
-   햄버거 메뉴
-   ============================================================ */
-(function () {
-  const hamburger = document.getElementById('hamburger');
-  const nav = document.getElementById('headerNav');
-
-  if (!hamburger || !nav) return;
-
-  hamburger.addEventListener('click', e => {
-    e.stopPropagation();
-    hamburger.classList.toggle('open');
-    nav.classList.toggle('open');
-    hamburger.setAttribute('aria-label', nav.classList.contains('open') ? '메뉴 닫기' : '메뉴 열기');
-  });
-
-  document.addEventListener('click', e => {
-    if (!hamburger.contains(e.target) && !nav.contains(e.target)) {
-      hamburger.classList.remove('open');
-      nav.classList.remove('open');
-    }
-  });
-})();
-
+/* 햄버거 메뉴 → js/header.js 로 분리 */
 
 /* ============================================================
    사이드 네비게이션 스크롤 위치 조정 (index와 동일한 방식)
