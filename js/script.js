@@ -9,133 +9,133 @@ const bannerData = [
     title: '칼로막베스',
     date: '2025-08-15 ~ 2025-08-17',
     location: '성남아트센터 앙상블시어터',
-    url: './subpage2.html'
+    url: 'subpage2.html'
   },
   {
     img: 'img/index/main-swipe-banner (2).png',
     title: '클라라 주미 강 & 김선욱',
     date: '2025-05-27',
     location: '성남아트센터 콘서트홀',
-    url: './subpage2.html'
+    url: 'subpage2.html'
   },
   {
     img: 'img/index/main-swipe-banner (3).png',
     title: '라크리마',
     date: '2026-10-02 ~ 2026-10-03',
     location: '성남아트센터 소극장',
-    url: './subpage2.html'
+    url: 'subpage2.html'
   },
   {
     img: 'img/index/main-swipe-banner (4).png',
     title: '국립극단〈태풍〉',
     date: '2026-10-17 ~ 2026-10-18',
     location: '성남아트센터 오페라하우스',
-    url: './subpage2.html'
+    url: 'subpage2.html'
   },
   {
     img: 'img/index/main-swipe-banner (5).png',
     title: '마티네콘서트<br>독일, 음악의 숲',
     date: '2026-03 ~ 2026-12 (매달 셋째 주 목요일)',
     location: '성남아트센터 콘서트홀',
-    url: './subpage2.html'
+    url: 'subpage2.html'
   },
   {
     img: 'img/index/main-swipe-banner (6).png',
     title: '오페라정원',
     date: '콘서트 오페라 〈카발레리아 루스티카나〉',
     location: '성남아트센터',
-    url: './subpage2.html'
+    url: 'subpage2.html'
   },
   {
     img: 'img/index/main-swipe-banner (7).png',
     title: 'VERMEER',
     date: '2025-12-12 ~ 2026-03-15',
     location: '성남브라운미술관 기획전시실',
-    url: './subpage2.html'
+    url: 'subpage2.html'
   },
   {
     img: 'img/index/main-swipe-banner (8).png',
     title: '오후의콘서트<br>보헤미아의 낭만',
     date: '2026-04-01',
     location: '성남아트센터 앙상블시어터',
-    url: './subpage2.html'
+    url: 'subpage2.html'
   },
   {
     img: 'img/index/main-swipe-banner (9).png',
     title: '이자람 판소리 눈·눈·눈',
     date: '2026-05-23',
     location: '성남아트센터 오페라하우스',
-    url: './subpage2.html'
+    url: 'subpage2.html'
   },
   {
     img: 'img/index/main-swipe-banner (10).png',
     title: '엘리자베트 레온스카야',
     date: '2026-10-03',
     location: '성남아트센터 콘서트홀',
-    url: './subpage2.html'
+    url: 'subpage2.html'
   },
   {
     img: 'img/index/main-swipe-banner (11).png',
     title: '망원동 브라더스',
     date: '2026-06-26 ~ 2026-06-27',
     location: '성남아트센터 앙상블시어터',
-    url: './subpage2.html'
+    url: 'subpage2.html'
   },
   {
     img: 'img/index/main-swipe-banner (12).png',
     title: 'BBC심포니오케스트라',
     date: '2026-03-28',
     location: '성남아트센터 콘서트홀',
-    url: './subpage2.html'
+    url: 'subpage2.html'
   },
   {
     img: 'img/index/main-swipe-banner (13).png',
     title: '들꽃',
     date: '2025-08-28 ~ 2025-08-29',
     location: '성남아트센터 앙상블시어터',
-    url: './subpage2.html'
+    url: 'subpage2.html'
   },
   {
     img: 'img/index/main-swipe-banner (14).png',
     title: '탬플',
     date: '2025-02-27 ~ 2025-02-28',
     location: '성남아트센터 앙상블시어터',
-    url: './subpage2.html'
+    url: 'subpage2.html'
   },
   {
     img: 'img/index/main-swipe-banner (15).png',
     title: '시뮬라시옹',
     date: '2025-10-23 ~ 2025-10-24',
     location: '성남아트센터 앙상블시어터',
-    url: './subpage2.html'
+    url: 'subpage2.html'
   },
   {
     img: 'img/index/main-swipe-banner (16).png',
     title: 'HETEROTOPIA',
     date: '2026-02-27 ~ 2026-06-26',
     location: '성남브라운미술관 전시실',
-    url: './subpage2.html'
+    url: 'subpage2.html'
   },
   {
     img: 'img/index/main-swipe-banner (17).png',
     title: '오후의콘서트<br>예술로 떠나는 세계여행',
     date: '2026-03 ~ 2026-12 (매월 첫째 주 수요일)',
     location: '성남아트센터 앙상블시어터',
-    url: './subpage2.html'
+    url: 'subpage2.html'
   },
   {
     img: 'img/index/main-swipe-banner (18).png',
     title: '찬란한, 고요',
     date: '2026-02-20 ~ 2026-04-19',
     location: '성남브라운미술관 전시실',
-    url: './subpage2.html'
+    url: 'subpage2.html'
   },
   {
     img: 'img/index/main-swipe-banner (19).png',
     title: 'K-POP으로 만나는 클래식',
     date: '2026-04-11',
     location: '성남아트리움 대극장',
-    url: './subpage2.html'
+    url: 'subpage2.html'
   }
 ];
 
