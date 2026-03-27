@@ -9,7 +9,7 @@
 
 ## 🖥️ 미리보기
 
-(메인 화면 이미지 또는 GIF 삽입)
+![banner](./img/seongnam-cultural-banner.png)
 
 ---
 
